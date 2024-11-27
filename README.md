@@ -68,8 +68,8 @@ Each post contains:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/blog-post-app.git
-cd blog-post-app
+git clone https://github.com/your-username/ejs-blog.git
+cd ejs-blog
 ```
 
 ### 2. Install Dependencies
