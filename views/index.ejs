@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Blog</h1>
+
+<% if(locals.posts && locals.posts.length > 0) { %>
+
+    <% posts.forEach(post => { %>
+    <div class="blog-container" id="<%= post.id %>">        
+        <div class="blog-title"><%= post.title %></div>
+        <div class="action-icons">
+            <a href="/edit/<%= post.id %>" title="Edit"><ion-icon name="create"></ion-icon></a>
+            <a href="/delete/<%= post.id %>" title="Delete"><ion-icon name="trash"></ion-icon></a>
+          </div>
+        <div class="blog-content">
+            <%= post.content %>
+        </div>    
+  </div>
+  <% }); %>
+
+<% }else{ %>
+<p>Looks like there are no posts. Want to create one? <a href="/new">Click here</a></p>
+<% } %>
+<!-- end of blog container -->
+
+
+
+
+<%- include('partials/footer.ejs') %>
